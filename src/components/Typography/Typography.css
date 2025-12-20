@@ -1,0 +1,144 @@
+/* Typography Component Styles */
+/* Uses design tokens from src/styles/tokens.css */
+
+.typography {
+  margin: 0;
+  padding: 0;
+  transition: color var(--transition-fast) var(--easing-standard);
+}
+
+/* Variant Styles */
+.typography--displayLarge {
+  font: var(--text-display-large);
+  letter-spacing: -0.02em;
+}
+
+.typography--displayMedium {
+  font: var(--text-display-medium);
+  letter-spacing: -0.01em;
+}
+
+.typography--headingLarge {
+  font: var(--text-heading-large);
+  letter-spacing: -0.01em;
+}
+
+.typography--headingMedium {
+  font: var(--text-heading-medium);
+}
+
+.typography--bodyLarge {
+  font: var(--text-body-large);
+}
+
+.typography--bodyRegular {
+  font: var(--text-body-regular);
+}
+
+.typography--bodySmall {
+  font: var(--text-body-small);
+}
+
+.typography--caption {
+  font: var(--text-caption);
+  letter-spacing: 0.02em;
+}
+
+.typography--button {
+  font: var(--text-button);
+}
+
+.typography--tabLabel {
+  font: var(--text-tab-label);
+}
+
+/* Color Styles */
+.typography--color-primary {
+  color: var(--color-text-primary);
+}
+
+.typography--color-secondary {
+  color: var(--color-text-secondary);
+}
+
+.typography--color-disabled {
+  color: var(--color-text-disabled);
+}
+
+.typography--color-success {
+  color: var(--color-status-success);
+}
+
+.typography--color-warning {
+  color: var(--color-status-warning);
+}
+
+.typography--color-error {
+  color: var(--color-status-error);
+}
+
+.typography--color-inherit {
+  color: inherit;
+}
+
+/* Alignment */
+.typography--align-left {
+  text-align: left;
+}
+
+.typography--align-center {
+  text-align: center;
+}
+
+.typography--align-right {
+  text-align: right;
+}
+
+.typography--align-justify {
+  text-align: justify;
+}
+
+/* Modifiers */
+.typography--bold {
+  font-weight: 700 !important;
+}
+
+.typography--italic {
+  font-style: italic !important;
+}
+
+.typography--truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Responsive adjustments */
+@media (max-width: 767px) {
+  .typography--displayLarge {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  .typography--displayMedium {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .typography--headingLarge {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .typography--headingMedium {
+    font-size: 18px;
+    line-height: 26px;
+  }
+}
+
+/* Print styles */
+@media print {
+  .typography {
+    color: black !important;
+  }
+}

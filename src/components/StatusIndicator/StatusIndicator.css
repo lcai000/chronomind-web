@@ -1,0 +1,41 @@
+/* Status Indicator Component Styles */
+
+.status-indicator {
+  width: 100%;
+}
+
+.status-indicator__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-0-5);
+}
+
+.status-indicator__track {
+  height: 8px;
+  background-color: rgba(45, 62, 63, 0.1);
+  border-radius: var(--radius-small);
+  overflow: hidden;
+}
+
+.status-indicator__progress {
+  height: 100%;
+  border-radius: var(--radius-small);
+  transition: width var(--transition-medium) var(--easing-standard);
+}
+
+/* Theme-specific colors */
+[data-theme="family"] .status-indicator__progress {
+  background-color: var(--color-accent-family);
+}
+
+[data-theme="professional"] .status-indicator__progress {
+  background-color: var(--color-accent-professional);
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .status-indicator__progress {
+    transition: none;
+  }
+}

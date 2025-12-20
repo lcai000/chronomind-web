@@ -1,0 +1,156 @@
+/* Design Tokens for Chronomind Dementia Care Simulator */
+/* Based on UI_STYLING.md - Version 2.0 */
+
+:root {
+  /* ============ COLORS ============ */
+
+  /* Backgrounds & Surfaces */
+  --color-bg-primary: #D4EDDA;        /* soft calming green */
+  --color-bg-secondary: #D1EFF0;      /* cards, elevated surfaces */
+  --color-surface-elevated: #FFFFFF;  /* modal backgrounds */
+
+  /* Text & Content */
+  --color-text-primary: #2D3E3F;      /* primary text - soft dark for readability */
+  --color-text-secondary: #5A7378;    /* secondary text, captions */
+  --color-text-disabled: #9BB0B2;     /* disabled states */
+
+  /* Accents & Interactive */
+  --color-accent-primary: #7FBFA0;    /* primary buttons, key actions */
+  --color-accent-primary-hover: #6BAA8C; /* hover state for primary accent */
+  --color-accent-family: #9B87C4;     /* family mode differentiation */
+  --color-accent-professional: #6BA5D6; /* professional mode differentiation */
+  --color-accent: var(--color-accent-primary); /* default accent */
+
+  /* Feedback & Status */
+  --color-status-success: #8BC9A3;    /* success messages, positive indicators */
+  --color-status-warning: #E8C487;    /* warnings, medium-priority alerts */
+  --color-status-error: #E89B9B;      /* errors, high-priority alerts */
+
+  /* Stress Indicators */
+  --color-stress-low: #8BC9A3;        /* low stress indicators */
+  --color-stress-medium: #E8C487;     /* medium stress indicators */
+  --color-stress-high: #E89B9B;       /* high stress indicators */
+
+  /* ============ TYPOGRAPHY ============ */
+  /* Font Families */
+  --font-family-base: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+  /* Type Scale - using font shorthand: weight size/line-height family */
+  --text-display-large: 700 32px/40px var(--font-family-base);
+  --text-display-medium: 600 28px/36px var(--font-family-base);
+  --text-heading-large: 600 24px/32px var(--font-family-base);
+  --text-heading-medium: 600 20px/28px var(--font-family-base);
+  --text-body-large: 400 18px/26px var(--font-family-base);
+  --text-body-regular: 400 16px/24px var(--font-family-base);
+  --text-body-small: 400 14px/20px var(--font-family-base);
+  --text-caption: 400 12px/16px var(--font-family-base);
+  --text-button: 600 16px/24px var(--font-family-base);
+  --text-tab-label: 600 15px/20px var(--font-family-base);
+
+  /* ============ SPACING (8-point grid) ============ */
+  --space-1: 8px;
+  --space-2: 16px;
+  --space-3: 24px;
+  --space-4: 32px;
+  --space-5: 40px;
+  --space-6: 48px;
+
+  /* Half steps for finer control */
+  --space-0-5: 4px;
+  --space-1-5: 12px;
+
+  /* ============ BORDER RADIUS ============ */
+  --radius-small: 4px;
+  --radius-medium: 8px;
+  --radius-large: 16px;
+  --radius-xlarge: 24px;
+  --radius-circle: 50%;
+
+  /* ============ SHADOWS ============ */
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.12);
+  --shadow-xl: 0 16px 32px rgba(0, 0, 0, 0.15);
+
+  /* ============ BREAKPOINTS ============ */
+  --breakpoint-mobile: 320px;
+  --breakpoint-tablet: 768px;
+  --breakpoint-desktop: 1024px;
+  --breakpoint-wide: 1440px;
+
+  /* ============ ANIMATION ============ */
+  --transition-fast: 100ms;
+  --transition-medium: 200ms;
+  --transition-slow: 300ms;
+  --transition-page: 500ms;
+
+  --easing-standard: cubic-bezier(0.4, 0, 0.2, 1);
+  --easing-enter: cubic-bezier(0, 0, 0.2, 1);
+  --easing-exit: cubic-bezier(0.4, 0, 1, 1);
+}
+
+
+/* ============ UTILITY CLASSES ============ */
+/* Color utilities */
+.bg-primary { background-color: var(--color-bg-primary); }
+.bg-secondary { background-color: var(--color-bg-secondary); }
+.text-primary { color: var(--color-text-primary); }
+.text-secondary { color: var(--color-text-secondary); }
+.text-disabled { color: var(--color-text-disabled); }
+.accent-primary { color: var(--color-accent-primary); }
+.accent-family { color: var(--color-accent-family); }
+.accent-professional { color: var(--color-accent-professional); }
+
+/* Typography utilities */
+.text-display-large { font: var(--text-display-large); }
+.text-display-medium { font: var(--text-display-medium); }
+.text-heading-large { font: var(--text-heading-large); }
+.text-heading-medium { font: var(--text-heading-medium); }
+.text-body-large { font: var(--text-body-large); }
+.text-body-regular { font: var(--text-body-regular); }
+.text-body-small { font: var(--text-body-small); }
+.text-caption { font: var(--text-caption); }
+.text-button { font: var(--text-button); }
+.text-tab-label { font: var(--text-tab-label); }
+
+/* Spacing utilities */
+.space-1 { margin: var(--space-1); }
+.space-2 { margin: var(--space-2); }
+.space-3 { margin: var(--space-3); }
+.space-4 { margin: var(--space-4); }
+.space-5 { margin: var(--space-5); }
+.space-6 { margin: var(--space-6); }
+
+.padding-1 { padding: var(--space-1); }
+.padding-2 { padding: var(--space-2); }
+.padding-3 { padding: var(--space-3); }
+.padding-4 { padding: var(--space-4); }
+.padding-5 { padding: var(--space-5); }
+.padding-6 { padding: var(--space-6); }
+
+/* Responsive container */
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 var(--space-2);
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+    padding: 0 var(--space-3);
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 960px;
+    padding: 0 var(--space-4);
+  }
+}
+
+@media (min-width: 1440px) {
+  .container {
+    max-width: 1200px;
+  }
+}
