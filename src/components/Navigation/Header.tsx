@@ -16,7 +16,7 @@ export interface HeaderProps {
  * Responsive with mobile hamburger menu.
  */
 export const Header: React.FC<HeaderProps> = ({
-  activeRoute = '/',
+  // activeRoute = '/',
   className = '',
 }) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);

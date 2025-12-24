@@ -1,36 +1,23 @@
-import React from 'react';
+import React, { type ElementType } from 'react';
 import './Card.css';
 
 export type CardVariant = 'elevated' | 'outlined' | 'filled';
 export type CardPadding = 'none' | 'small' | 'medium' | 'large';
 
 export interface CardProps {
-  /** Card variant style */
   variant?: CardVariant;
-  /** Padding size */
   padding?: CardPadding;
-  /** Whether the card is interactive (hover effects) */
   interactive?: boolean;
-  /** Whether the card should take full width */
   fullWidth?: boolean;
-  /** Card content */
   children: React.ReactNode;
-  /** Additional CSS class */
   className?: string;
-  /** Click handler */
   onClick?: (event: React.MouseEvent<HTMLDivElement>) => void;
-  /** HTML element to render (defaults to div) */
-  component?: keyof JSX.IntrinsicElements;
-  /** Accessibility label */
+  /** Changed from keyof JSX.IntrinsicElements to ElementType */
+  component?: ElementType;
   'aria-label'?: string;
-  /** ID for testing */
   testId?: string;
 }
 
-/**
- * Card component for content containers.
- * Follows Chronomind design system with consistent spacing and shadows.
- */
 export const Card: React.FC<CardProps> = ({
   variant = 'elevated',
   padding = 'medium',
@@ -48,7 +35,6 @@ export const Card: React.FC<CardProps> = ({
     onClick?.(event);
   };
 
-  // Build CSS classes
   const variantClass = `card--${variant}`;
   const paddingClass = `card--padding-${padding}`;
   const interactiveClass = interactive ? 'card--interactive' : '';
@@ -65,30 +51,30 @@ export const Card: React.FC<CardProps> = ({
     .filter(Boolean)
     .join(' ');
 
-  const Element = component || 'div';
+  // Type assertion ensures Element is treated as a component
+  const Element = (component || 'div') as ElementType;
 
   return (
     <Element
       className={classes}
       onClick={handleClick}
       aria-label={ariaLabel}
+      data-testid={testId}
       role={onClick ? 'button' : undefined}
       tabIndex={onClick ? 0 : undefined}
       onKeyDown={
         onClick
-          ? (e) => {
+          ? (e: React.KeyboardEvent<HTMLElement>) => {
               if (e.key === 'Enter' || e.key === ' ') {
                 e.preventDefault();
-                onClick(e as any);
+                // Safe cast for the shared click handler
+                onClick(e as unknown as React.MouseEvent<HTMLDivElement>);
               }
             }
           : undefined
       }
-      data-testid={testId}
     >
       {children}
     </Element>
   );
 };
-
-export default Card;

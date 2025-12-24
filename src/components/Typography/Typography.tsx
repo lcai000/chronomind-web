@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { type ElementType } from 'react';
 import './Typography.css';
 
 export type TypographyVariant =
@@ -25,32 +25,19 @@ export type TypographyColor =
 export type TypographyAlign = 'left' | 'center' | 'right' | 'justify';
 
 export interface TypographyProps {
-  /** The typography variant */
   variant?: TypographyVariant;
-  /** Text color */
   color?: TypographyColor;
-  /** Text alignment */
   align?: TypographyAlign;
-  /** Whether to make text bold */
   bold?: boolean;
-  /** Whether to make text italic */
   italic?: boolean;
-  /** Whether to truncate text with ellipsis */
   truncate?: boolean;
-  /** Additional CSS class */
   className?: string;
-  /** React children */
   children: React.ReactNode;
-  /** HTML element to render (defaults to variant mapping) */
-  component?: keyof JSX.IntrinsicElements;
-  /** Optional onClick handler */
+  /** Changed from keyof JSX.IntrinsicElements to ElementType */
+  component?: ElementType;
   onClick?: () => void;
 }
 
-/**
- * Typography component for consistent text styling across the application.
- * Uses design system tokens for typography scale and colors.
- */
 export const Typography: React.FC<TypographyProps> = ({
   variant = 'bodyRegular',
   color = 'primary',
@@ -63,8 +50,8 @@ export const Typography: React.FC<TypographyProps> = ({
   component,
   onClick,
 }) => {
-  // Map variant to HTML element
-  const getComponent = (): keyof JSX.IntrinsicElements => {
+  // Return type changed to ElementType
+  const getComponent = (): ElementType => {
     if (component) return component;
 
     switch (variant) {
@@ -88,7 +75,6 @@ export const Typography: React.FC<TypographyProps> = ({
     }
   };
 
-  // Build CSS classes
   const variantClass = `typography--${variant}`;
   const colorClass = `typography--color-${color}`;
   const alignClass = `typography--align-${align}`;
@@ -114,5 +100,3 @@ export const Typography: React.FC<TypographyProps> = ({
     </Element>
   );
 };
-
-export default Typography;
