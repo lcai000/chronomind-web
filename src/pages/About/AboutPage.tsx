@@ -9,7 +9,7 @@ import './AboutPage.css';
 export const AboutPage: React.FC = () => {
   const values = [
     {
-      title: 'Empathy First',
+      title: 'Simplicity',
       description: 'We believe understanding the emotional experience of both caregivers and those with dementia is foundational to effective care.',
       icon: '❤️',
     },
@@ -23,19 +23,6 @@ export const AboutPage: React.FC = () => {
       description: 'Our simulations are grounded in clinical research and real caregiver experiences.',
       icon: '🔬',
     },
-    {
-      title: 'Continuous Improvement',
-      description: 'We constantly update our content based on user feedback and emerging research.',
-      icon: '🔄',
-    },
-  ];
-
-  const milestones = [
-    { year: '2023', event: 'Founded by Dr. Sarah Chen after years of clinical experience' },
-    { year: '2024', event: 'First prototype developed with caregiver feedback' },
-    { year: '2025', event: 'Launch of Family Caregiver Mode' },
-    { year: '2026', event: 'Professional Caregiver Mode released' },
-    { year: '2027', event: 'Expansion to educational institutions worldwide' },
   ];
 
   return (
@@ -45,9 +32,6 @@ export const AboutPage: React.FC = () => {
         <div className="container">
           <Typography variant="displayLarge" align="center">
             About Chronomind
-          </Typography>
-          <Typography variant="bodyLarge" align="center" color="secondary">
-            Transforming dementia care through experiential learning
           </Typography>
         </div>
       </section>
@@ -115,35 +99,6 @@ export const AboutPage: React.FC = () => {
                   {value.description}
                 </Typography>
               </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Timeline */}
-      <section className="about-page__timeline">
-        <div className="container">
-          <Typography variant="headingLarge" align="center" className="section-title">
-            Our Journey
-          </Typography>
-          <Typography variant="bodyRegular" align="center" color="secondary" className="section-description">
-            Key milestones in our development
-          </Typography>
-
-          <div className="about-page__timeline-container">
-            {milestones.map((milestone, index) => (
-              <div key={index} className="timeline-item">
-                <div className="timeline-year">
-                  <Typography variant="headingMedium" color="primary">
-                    {milestone.year}
-                  </Typography>
-                </div>
-                <div className="timeline-event">
-                  <Typography variant="bodyRegular" color="secondary">
-                    {milestone.event}
-                  </Typography>
-                </div>
-              </div>
             ))}
           </div>
         </div>

@@ -16,15 +16,6 @@ export interface FooterProps {
 export const Footer: React.FC<FooterProps> = ({ className = '' }) => {
   const currentYear = new Date().getFullYear();
 
-  const siteLinks = [
-    { path: '/', label: 'Home' },
-    { path: '/app', label: 'App' },
-    { path: '/demo', label: 'Demo' },
-    { path: '/team', label: 'Team' },
-    { path: '/impact', label: 'Impact' },
-    { path: '/about', label: 'About' },
-  ];
-
   const resourceLinks = [
     { path: '/privacy', label: 'Privacy Policy' },
     { path: '/terms', label: 'Terms of Service' },
@@ -33,10 +24,8 @@ export const Footer: React.FC<FooterProps> = ({ className = '' }) => {
   ];
 
   const socialLinks = [
-    { name: 'Twitter', icon: '𝕏', url: '#' },
-    { name: 'LinkedIn', icon: 'in', url: '#' },
-    { name: 'GitHub', icon: '📦', url: '#' },
-    { name: 'YouTube', icon: '▶️', url: '#' },
+    { name: 'GitHub', icon: '📦', url: 'https://github.com/lcai000' },
+    { name: 'YouTube', icon: '▶️', url: 'https://www.youtube.com/@chronomind-dev' },
   ];
 
   return (
@@ -57,24 +46,6 @@ export const Footer: React.FC<FooterProps> = ({ className = '' }) => {
             <Button variant="primary" size="small">
               Try Demo
             </Button>
-          </div>
-
-          {/* Site Links */}
-          <div className="footer__links-section">
-            <Typography variant="headingMedium" color="primary" className="footer__links-title">
-              Site
-            </Typography>
-            <ul className="footer__links-list">
-              {siteLinks.map((link) => (
-                <li key={link.path}>
-                  <Link to={link.path} className="footer__link">
-                    <Typography variant="bodySmall" color="secondary">
-                      {link.label}
-                    </Typography>
-                  </Link>
-                </li>
-              ))}
-            </ul>
           </div>
 
           {/* Resources */}
@@ -101,11 +72,11 @@ export const Footer: React.FC<FooterProps> = ({ className = '' }) => {
               Stay Updated
             </Typography>
             <Typography variant="bodySmall" color="secondary">
-              Subscribe to our newsletter for updates on dementia care training.
+              Follow our Socials
             </Typography>
             <div style={{ marginTop: 'var(--space-1)' }}>
               <Button variant="secondary" size="small" fullWidth>
-                Subscribe
+                Youtube
               </Button>
             </div>
           </div>

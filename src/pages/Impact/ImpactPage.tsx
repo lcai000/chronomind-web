@@ -28,19 +28,20 @@ export const ImpactPage: React.FC = () => {
   ];
 
   const testimonials = [
+    // TODO: replace first 2 with real ones
+    // {
+    //   quote: 'Chronomind helped me understand what my mother was experiencing. I feel more prepared and less anxious.',
+    //   author: 'Family Caregiver',
+    //   role: 'Daughter of dementia patient',
+    // },
+    // {
+    //   quote: 'As a nursing student, the simulation gave me practical skills I couldn\'t get from textbooks alone.',
+    //   author: 'Nursing Student',
+    //   role: 'University of Health Sciences',
+    // },
     {
-      quote: 'Chronomind helped me understand what my mother was experiencing. I feel more prepared and less anxious.',
-      author: 'Family Caregiver',
-      role: 'Daughter of dementia patient',
-    },
-    {
-      quote: 'As a nursing student, the simulation gave me practical skills I couldn\'t get from textbooks alone.',
-      author: 'Nursing Student',
-      role: 'University of Health Sciences',
-    },
-    {
-      quote: 'Our care facility uses Chronomind for staff training. It\'s reduced errors and improved patient satisfaction.',
-      author: 'Care Facility Manager',
+      quote: 'Having lots of information is essential, I like how simple the app is. When most families come in, they have lots of questions about basic daily care.',
+      author: 'Nurse Practioner',
       role: 'Sunset Senior Living',
     },
   ];
@@ -112,9 +113,6 @@ export const ImpactPage: React.FC = () => {
           <Typography variant="headingLarge" align="center" className="section-title">
             Real Stories, Real Impact
           </Typography>
-          <Typography variant="bodyRegular" align="center" color="secondary" className="section-description">
-            Hear from those whose lives have been touched by Chronomind
-          </Typography>
 
           <div className="impact-page__testimonial-grid">
             {testimonials.map((testimonial, index) => (
@@ -155,11 +153,6 @@ export const ImpactPage: React.FC = () => {
               <a href="/contact" className="cta-link">
                 <Typography variant="bodyRegular" color="primary">
                   Partner With Us →
-                </Typography>
-              </a>
-              <a href="/research" className="cta-link">
-                <Typography variant="bodyRegular" color="primary">
-                  Access Research →
                 </Typography>
               </a>
             </div>

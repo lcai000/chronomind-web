@@ -9,55 +9,44 @@ import './TeamPage.css';
 export const TeamPage: React.FC = () => {
   const teamMembers = [
     {
-      name: 'Dr. Sarah Chen',
-      role: 'Founder & CEO',
-      bio: 'Neurologist with 15+ years experience in dementia care.',
-      expertise: 'Clinical Neurology, Caregiver Training',
-      avatar: '👩‍⚕️',
-    },
-    {
-      name: 'Marcus Johnson',
-      role: 'Lead Developer',
-      bio: 'Software engineer specializing in educational technology.',
-      expertise: 'React Native, Simulation Design',
+      name: 'Landon Cai',
+      role: 'Cofounder + Lead Developer',
       avatar: '👨‍💻',
     },
     {
-      name: 'Dr. Elena Rodriguez',
-      role: 'Clinical Director',
-      bio: 'Geriatric psychologist focusing on caregiver mental health.',
-      expertise: 'Psychology, Stress Management',
-      avatar: '👩‍🏫',
+      name: 'Joyce Song',
+      role: 'Cofounder + Communication Lead',
+      avatar: '👨‍💻',
     },
     {
-      name: 'David Kim',
-      role: 'UX/UI Designer',
-      bio: 'Accessibility-focused designer with healthcare experience.',
-      expertise: 'Accessibility, User Research',
-      avatar: '🎨',
+      name: 'Darryl Tang',
+      role: 'Software Developer',
+      avatar: '👨‍💻',
     },
   ];
 
-  const advisors = [
-    {
-      name: 'Prof. James Wilson',
-      role: 'Advisory Board Chair',
-      affiliation: 'Stanford University Geriatrics',
-      avatar: '👴',
-    },
-    {
-      name: 'Dr. Maria Garcia',
-      role: 'Ethics Advisor',
-      affiliation: 'National Dementia Care Network',
-      avatar: '👩‍⚖️',
-    },
-    {
-      name: 'Lisa Thompson',
-      role: 'Caregiver Advocate',
-      affiliation: 'Family Caregiver Alliance',
-      avatar: '👵',
-    },
-  ];
+// TODO: Replace with Real Advisors
+
+  // const advisors = [
+  //   {
+  //     name: 'Prof. James Wilson',
+  //     role: 'Advisory Board Chair',
+  //     affiliation: 'Stanford University Geriatrics',
+  //     avatar: '👴',
+  //   },
+  //   {
+  //     name: 'Dr. Maria Garcia',
+  //     role: 'Ethics Advisor',
+  //     affiliation: 'National Dementia Care Network',
+  //     avatar: '👩‍⚖️',
+  //   },
+  //   {
+  //     name: 'Lisa Thompson',
+  //     role: 'Caregiver Advocate',
+  //     affiliation: 'Family Caregiver Alliance',
+  //     avatar: '👵',
+  //   },
+  // ];
 
   return (
     <div className="team-page">
@@ -66,9 +55,6 @@ export const TeamPage: React.FC = () => {
         <div className="container">
           <Typography variant="displayLarge" align="center">
             Our Team
-          </Typography>
-          <Typography variant="bodyLarge" align="center" color="secondary">
-            Passionate professionals dedicated to transforming dementia care training
           </Typography>
         </div>
       </section>
@@ -107,21 +93,13 @@ export const TeamPage: React.FC = () => {
                 <Typography variant="bodySmall" align="center" color="primary">
                   {member.role}
                 </Typography>
-                <Typography variant="bodySmall" align="center" color="secondary">
-                  {member.bio}
-                </Typography>
-                <div className="team-member__expertise">
-                  <Typography variant="caption" color="secondary">
-                    Expertise: {member.expertise}
-                  </Typography>
-                </div>
               </Card>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Advisors */}
+      {/* Advisors
       <section className="team-page__advisors">
         <div className="container">
           <Typography variant="headingLarge" align="center" className="section-title">
@@ -148,10 +126,10 @@ export const TeamPage: React.FC = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Join Team */}
-      <section className="team-page__join">
+      {/* <section className="team-page__join">
         <div className="container">
           <Card variant="filled" padding="large" className="join-card">
             <Typography variant="headingLarge" align="center">
@@ -174,7 +152,7 @@ export const TeamPage: React.FC = () => {
             </div>
           </Card>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 };

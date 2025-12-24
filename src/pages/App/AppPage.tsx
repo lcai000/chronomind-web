@@ -1,7 +1,7 @@
 import React from 'react';
 import { Typography } from '../../components/Typography';
 import { Card } from '../../components/Card';
-import { Button } from '../../components/Button';
+// import { Button } from '../../components/Button';
 import './AppPage.css';
 
 /**
@@ -38,9 +38,6 @@ export const AppPage: React.FC = () => {
         <div className="container">
           <Typography variant="displayLarge" align="center">
             Chronomind App
-          </Typography>
-          <Typography variant="bodyLarge" align="center" color="secondary">
-            Experience dementia care training like never before
           </Typography>
         </div>
       </section>
@@ -123,16 +120,16 @@ export const AppPage: React.FC = () => {
               Download the App
             </Typography>
             <Typography variant="bodyLarge" align="center" color="secondary">
-              Available on iOS and Android devices
+              Available Soon iOS and Android devices
             </Typography>
-            <div className="app-page__download-buttons">
+            {/* <div className="app-page__download-buttons">
               <Button variant="primary" size="large">
                 App Store
               </Button>
               <Button variant="primary" size="large">
                 Google Play
               </Button>
-            </div>
+            </div> */}
             <Typography variant="caption" align="center" color="secondary">
               *Demo version available on this website
             </Typography>

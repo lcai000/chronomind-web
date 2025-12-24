@@ -80,7 +80,7 @@ export const HomePage: React.FC = () => {
                 Start Free Demo
               </Button>
               <Button variant="text" size="large" onClick={() => navigate('/impact')}>
-                See Our Impact
+                Impact
               </Button>
             </div>
           </Card>
