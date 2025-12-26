@@ -32,6 +32,7 @@
 
 .app-page__feature-grid {
   display: grid;
+  justify-content: center;
   grid-template-columns: 1fr;
   gap: var(--space-3);
   max-width: 1200px;
@@ -42,7 +43,7 @@
   }
 
   @media (min-width: 1024px) {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
@@ -68,6 +69,10 @@
   justify-content: center;
   border-radius: var(--radius-circle);
   background-color: rgba(127, 191, 160, 0.1);
+}
+
+.feature-card__icon:empty {
+  display: none;
 }
 
 /* Mode Comparison */

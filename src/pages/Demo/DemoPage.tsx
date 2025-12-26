@@ -14,7 +14,7 @@ export const DemoPage: React.FC = () => {
               className="demo-video-embed"
               width="100%"
               height="100%"
-              src="https://www.youtube.com/shorts/Yd24wNS71aI"
+              src="https://www.youtube.com/embed/Yd24wNS71aI?mute=1"
               title="Chronomind Demo Preview"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

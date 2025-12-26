@@ -1,0 +1,33 @@
+.terms-page {
+  padding: var(--space-8) 0;
+}
+
+.terms-page__container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.terms-page__section {
+  margin-bottom: var(--space-6);
+}
+
+.terms-page__section-title {
+  margin-bottom: var(--space-3);
+}
+
+.terms-page__content {
+  line-height: 1.6;
+}
+
+.terms-page__last-updated {
+  color: var(--color-text-secondary);
+  font-style: italic;
+  margin-top: var(--space-8);
+  border-top: 1px solid var(--color-border);
+  padding-top: var(--space-4);
+}
+
+.terms-page__list {
+  margin-left: var(--space-4);
+  margin-top: var(--space-2);
+}

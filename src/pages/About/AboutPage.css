@@ -76,15 +76,16 @@
   display: grid;
   grid-template-columns: 1fr;
   gap: var(--space-3);
-  max-width: 1200px;
+  max-width: 800px;
   margin: var(--space-4) auto 0;
+  justify-content: center;
 
   @media (min-width: 768px) {
     grid-template-columns: repeat(2, 1fr);
   }
 
   @media (min-width: 1024px) {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
@@ -94,6 +95,8 @@
   flex-direction: column;
   align-items: center;
   transition: transform var(--transition-medium) var(--easing-standard);
+  margin: 0 auto;
+  max-width: 320px;
 
   &:hover {
     transform: translateY(-4px);
@@ -110,6 +113,10 @@
   justify-content: center;
   border-radius: var(--radius-circle);
   background-color: rgba(127, 191, 160, 0.1);
+}
+
+.value-card__icon:empty {
+  display: none;
 }
 
 /* Timeline */
@@ -166,6 +173,53 @@
   border: 2px solid white;
 }
 
+/* Core Team */
+.about-page__team {
+  padding: var(--space-6) 0;
+  background-color: var(--color-bg-secondary);
+}
+
+.about-page__team-grid {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 1fr;
+  gap: var(--space-3);
+  max-width: 1200px;
+  margin: var(--space-4) auto 0;
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.team-member {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform var(--transition-medium) var(--easing-standard);
+
+  &:hover {
+    transform: translateY(-4px);
+  }
+}
+
+.team-member__avatar {
+  font-size: 48px;
+  margin-bottom: var(--space-2);
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-circle);
+  background-color: rgba(127, 191, 160, 0.1);
+}
+
 /* Contact */
 .about-page__contact {
   padding: var(--space-6) 0;
@@ -205,6 +259,11 @@
 
   .about-page__values-grid {
     grid-template-columns: 1fr;
+    max-width: 400px;
+  }
+
+  .about-page__team-grid {
+    grid-template-columns: 1fr;
   }
 
   .about-page__timeline-container:before {
@@ -229,6 +288,14 @@
 /* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
   .value-card {
+    transition: none;
+
+    &:hover {
+      transform: none;
+    }
+  }
+
+  .team-member {
     transition: none;
 
     &:hover {

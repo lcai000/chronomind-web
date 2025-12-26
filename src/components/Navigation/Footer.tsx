@@ -23,11 +23,6 @@ export const Footer: React.FC<FooterProps> = ({ className = '' }) => {
     { path: '/support', label: 'Support' },
   ];
 
-  const socialLinks = [
-    { name: 'GitHub', icon: '📦', url: 'https://github.com/lcai000' },
-    { name: 'YouTube', icon: '▶️', url: 'https://www.youtube.com/@chronomind-dev' },
-  ];
-
   return (
     <footer className={`footer ${className}`}>
       <div className="footer__container container">
@@ -40,12 +35,6 @@ export const Footer: React.FC<FooterProps> = ({ className = '' }) => {
                 Chronomind
               </Typography>
             </Link>
-            <Typography variant="bodySmall" color="secondary" className="footer__description">
-              A dementia care simulation app that trains family caregivers and students through authentic, interactive scenarios.
-            </Typography>
-            <Button variant="primary" size="small">
-              Try Demo
-            </Button>
           </div>
 
           {/* Resources */}
@@ -74,10 +63,27 @@ export const Footer: React.FC<FooterProps> = ({ className = '' }) => {
             <Typography variant="bodySmall" color="secondary">
               Follow our Socials
             </Typography>
-            <div style={{ marginTop: 'var(--space-1)' }}>
-              <Button variant="secondary" size="small" fullWidth>
-                Youtube
-              </Button>
+            <div style={{ marginTop: 'var(--space-3)', display: 'flex', flexDirection: 'column', gap: 'var(--space-2)' }}>
+              <a
+                href="https://www.youtube.com/@chronomind-dev"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ textDecoration: 'none' }}
+              >
+                <Button variant="secondary" size="small" fullWidth>
+                  Youtube
+                </Button>
+              </a>
+              <a
+                href="https://github.com/lcai000"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ textDecoration: 'none' }}
+              >
+                <Button variant="secondary" size="small" fullWidth>
+                  GitHub
+                </Button>
+              </a>
             </div>
           </div>
         </div>
@@ -88,24 +94,6 @@ export const Footer: React.FC<FooterProps> = ({ className = '' }) => {
           <Typography variant="caption" color="secondary" className="footer__copyright">
             © {currentYear} Chronomind Dementia Care Simulator. All rights reserved.
           </Typography>
-
-          {/* Social Links */}
-          <div className="footer__social">
-            {socialLinks.map((social) => (
-              <a
-                key={social.name}
-                href={social.url}
-                className="footer__social-link"
-                aria-label={`Follow us on ${social.name}`}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Typography variant="bodyRegular" color="inherit">
-                  {social.icon}
-                </Typography>
-              </a>
-            ))}
-          </div>
         </div>
       </div>
     </footer>

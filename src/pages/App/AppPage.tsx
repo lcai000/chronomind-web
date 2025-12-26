@@ -12,22 +12,17 @@ export const AppPage: React.FC = () => {
     {
       title: 'Interactive Scenarios',
       description: 'Practice real-life dementia care situations in a safe environment.',
-      icon: '🎭',
+      icon: '',
     },
     {
-      title: 'Stress Indicators',
-      description: 'Monitor caregiver stress levels with visual feedback.',
-      icon: '📊',
+      title: 'AI Analysis',
+      description: 'Have AI analyze your game-play, the decisions you make, and their impact',
+      icon: '',
     },
     {
-      title: 'Decision Training',
-      description: 'Learn crucial decision-making skills through guided exercises.',
-      icon: '🧠',
-    },
-    {
-      title: 'Progress Tracking',
-      description: 'Track your learning journey and skill development over time.',
-      icon: '📈',
+      title: 'Stress Stats',
+      description: 'Learn how your decisions in simulation affect patient and caregiver stress, empathy, safety...',
+      icon: '',
     },
   ];
 

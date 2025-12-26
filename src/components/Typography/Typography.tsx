@@ -36,6 +36,7 @@ export interface TypographyProps {
   /** Changed from keyof JSX.IntrinsicElements to ElementType */
   component?: ElementType;
   onClick?: () => void;
+  style?: React.CSSProperties;
 }
 
 export const Typography: React.FC<TypographyProps> = ({
@@ -49,6 +50,7 @@ export const Typography: React.FC<TypographyProps> = ({
   children,
   component,
   onClick,
+  style,
 }) => {
   // Return type changed to ElementType
   const getComponent = (): ElementType => {
@@ -95,7 +97,7 @@ export const Typography: React.FC<TypographyProps> = ({
   const Element = getComponent();
 
   return (
-    <Element className={classes} onClick={onClick}>
+    <Element className={classes} onClick={onClick} style={style}>
       {children}
     </Element>
   );

@@ -7,23 +7,41 @@ import './AboutPage.css';
  * About page component - explains Chronomind's mission and values.
  */
 export const AboutPage: React.FC = () => {
+  const teamMembers = [
+    {
+      name: 'Landon Cai',
+      role: 'Cofounder + Lead Developer',
+      avatar: '👨‍💻',
+    },
+    {
+      name: 'Joyce Song',
+      role: 'Cofounder + Communication Lead',
+      avatar: '👨‍💻',
+    },
+    {
+      name: 'Darryl Tang',
+      role: 'Software Developer',
+      avatar: '👨‍💻',
+    },
+  ];
+
   const values = [
     {
       title: 'Simplicity',
-      description: 'We believe understanding the emotional experience of both caregivers and those with dementia is foundational to effective care.',
-      icon: '❤️',
+      description: 'We prioritize a clean, intuitive interface because we know how frustrating complex software can be. Everything we build is designed to be as straightforward as possible, so you can focus on learning, not navigating.',
+      icon: '',
     },
     {
       title: 'Accessible Education',
       description: 'Dementia care training should be available to everyone, regardless of location, background, or financial means.',
-      icon: '📚',
+      icon: '',
     },
     {
       title: 'Evidence-Based',
-      description: 'Our simulations are grounded in clinical research and real caregiver experiences.',
-      icon: '🔬',
+      description: 'Our approach is rooted in real-world expertise. We have consulted and interviewed local caregiving facilities and professional caregivers to ensure our simulations reflect the actual challenges faced in daily care.',
+      icon: '',
     },
-  ];
+];
 
   return (
     <div className="about-page">
@@ -53,31 +71,6 @@ export const AboutPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Problem & Solution */}
-      <section className="about-page__problem">
-        <div className="container">
-          <div className="about-page__problem-solution">
-            <Card variant="elevated" padding="large" className="problem-card">
-              <Typography variant="headingLarge" align="center" color="primary">
-                The Problem
-              </Typography>
-              <Typography variant="bodyRegular" color="secondary">
-                Current dementia caregivers often lack proper training, leading to stress, burnout, and suboptimal care. There's a significant gap between medical standards and practical caregiving knowledge, with no safe, affordable way to practice essential skills.
-              </Typography>
-            </Card>
-
-            <Card variant="elevated" padding="large" className="solution-card">
-              <Typography variant="headingLarge" align="center" color="primary">
-                Our Solution
-              </Typography>
-              <Typography variant="bodyRegular" color="secondary">
-                Chronomind provides authentic, interactive dementia care simulations that allow caregivers to practice crucial decisions in a risk-free environment. We bridge the gap between theory and practice through immersive scenarios that build both skills and empathy.
-              </Typography>
-            </Card>
-          </div>
-        </div>
-      </section>
-
       {/* Values */}
       <section className="about-page__values">
         <div className="container">
@@ -85,7 +78,7 @@ export const AboutPage: React.FC = () => {
             Our Values
           </Typography>
           <Typography variant="bodyRegular" align="center" color="secondary" className="section-description">
-            The principles that guide everything we do
+            The principles that guide our work
           </Typography>
 
           <div className="about-page__values-grid">
@@ -104,6 +97,29 @@ export const AboutPage: React.FC = () => {
         </div>
       </section>
 
+      {/* Core Team */}
+      <section className="about-page__team">
+        <div className="container">
+          <Typography variant="headingLarge" align="center" className="section-title">
+            Team
+          </Typography>
+
+          <div className="about-page__team-grid">
+            {teamMembers.map((member, index) => (
+              <Card key={index} variant="elevated" padding="medium" className="team-member">
+                <div className="team-member__avatar">{member.avatar}</div>
+                <Typography variant="headingMedium" align="center">
+                  {member.name}
+                </Typography>
+                <Typography variant="bodySmall" align="center" color="primary">
+                  {member.role}
+                </Typography>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Contact */}
       <section className="about-page__contact">
         <div className="container">
@@ -115,9 +131,9 @@ export const AboutPage: React.FC = () => {
               We're always interested in connecting with caregivers, researchers, and partners who share our mission.
             </Typography>
             <div className="contact-links">
-              <a href="mailto:hello@chronomind.com" className="contact-link">
+              <a href="mailto:chronomind.contact.dev@gmail.com" className="contact-link">
                 <Typography variant="bodyRegular" color="primary">
-                  hello@chronomind.com
+                  chronomind.contact.dev@gmail.com
                 </Typography>
               </a>
               <a href="/contact" className="contact-link">
